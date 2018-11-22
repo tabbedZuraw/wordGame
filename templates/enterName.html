@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+        <form action='/scoreBoard' method='POST'>
+            <table>
+<input class="textbox" type="hidden" name="sessionId" id="sessionId" value={{ sessionId }}><br>
+<input class="textbox" type="hidden" name="timeN" id="timeN" value={{ time }}><br>
+               Your rank is: {{ rank }} , with a score of {{ time }}.
+                please enter your name: <input type="text" name="name" required><br> 
+                <input type="submit" value="Done">
+            </table>
+        </form>
+{% endblock %} 

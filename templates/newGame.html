@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block body %}
+        <form action='/calculate' method='POST'>
+            <table>
+                <input class="textbox" type="hidden" name="sessionId" id="sessionId" value={{ sessionId }}><br>
+                <input class="textbox" type="hidden" name="timeN" id="timeN" value={{ time }}><br>
+                Word: <input class="textbox" type="text" name="word" id="bGene" value={{ value }}><br>
+                first Word: <input type="text" name="field[]" required><br>
+                second Word: <input type="text" name="field[]" required><br>
+                third Word: <input type="text" name="field[]" required><br>
+                fourth Word: <input type="text" name="field[]" required><br>
+                fifth Word: <input type="text" name="field[]" required><br>
+                sixth Word: <input type="text" name="field[]" required><br>
+                seventh Word: <input type="text" name="field[]" required><br>
+                <input type="submit" value="Done">
+            </table>
+        </form>
+{% endblock %}
+

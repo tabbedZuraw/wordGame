@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+            <table style="width:100%">
+                <tr>
+                <th>rank</th>
+                <th>name</th>
+                <th>Score</th> 
+                </tr>
+            {% for item in items[:10] %}
+            <TR>    
+                <TD class="c">{{loop.index}}</TD>
+                <TD class="c1">{{item.name}}</TD>
+                <TD class="c2">{{item.score}}</TD>
+            </TR>
+            {% endfor %}
+            </table>
+            <input class="textbox" type="hidden" name="sessionId" id="sessionId" value={{ sessionId }}><br>
+            <input value="Try again" type="button" onclick="window.location = '/';">
+{% endblock %}
+

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block body %}
+            <table style="width:100%">
+                <tr>
+                <th>Error type</th>
+                <th>Couse of Error</th>
+                </tr>
+            {% for error in errors %}
+            <TR>
+                <TD class="c1">{{error.typeOfError}}</TD>
+                <TD class="c2">{{error.cause}}</TD>
+            </TR>
+            {% endfor %}
+            </table>
+            <input class="textbox" type="hidden" name="sessionId" id="sessionId" value={{ sessionId }}><br>
+            <input value="Try again" type="button" onclick="window.location = '/';">
+{% endblock %}

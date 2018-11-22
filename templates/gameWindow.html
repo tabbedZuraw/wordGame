@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body %}
+        <form action='/gameStart' method="POST">
+            <input class="textbox" type="hidden" name="sessionId" id="sessionId" value={{ sessionId }}><br>
+            <input type="submit" value="New Game">
+        </form>
+{% endblock %}
+
